@@ -10,14 +10,19 @@ let yessa = {
 //Get yessa's name and favoritePhrase
 
 
+// let name = yessa.name
+let { name , race, skills} = yessa
+
+
+
 
 //Instead of person, pick off the parameters: name, planet, skills
 //on the first line of the function
-function logPerson(person){
-
+function logPerson({name, planet, skills}){
+    return `${name} enjoys ${skills.join(', ')} on planet ${planet}`
 }
 
-logPerson(yessa)
+
 
 //pick off the parameters: name, friends, race
 //instead of the parameter

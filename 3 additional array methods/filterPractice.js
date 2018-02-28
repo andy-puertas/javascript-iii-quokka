@@ -28,5 +28,24 @@ var athletes = [
 ]
 
 //Filter OUT all athletes with wits 5 or higher
+
+let jocks = athletes.filter((athlete)=>{
+    if (athlete.wits>=5){
+        return false;
+    } 
+        return true
+})
+
+
 //Filter IN all athletes with a strength higher than 6
+
+let strongMen = athletes.filter((athlete)=>athlete.strength>6);
+
+
+
 //Filter OUT all althletes that don't have Guy in their name
+
+let theGuys = athletes.filter(athlete=>athlete.name.includes('Guy'));
+let theNotGuys = athletes.filter(athlete=> !athlete.name.includes('Guy'))
+
+

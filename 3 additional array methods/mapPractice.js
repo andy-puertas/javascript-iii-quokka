@@ -3,6 +3,19 @@ var answers = ["yes", "no", "yes", "no", "no", "no"]
 //map over answers
 //change yes into no and no into yes
 
+answers = answers.map((answer) => {
+    if (answer === 'yes'){
+        return 'no';
+    } else if(answer==='no'){
+        return 'yes';
+    } else{
+        return "I don't know"
+    }
+})
+
+answers
+
+
 //DESIRED RESULT = ["no", "yes", "no", "yes", "yes", "yes"]
 
 
@@ -17,7 +30,17 @@ var employees = [
 //split on the - in name and turn name into first_name and last_name
 //save it to a new array variable
 
+let newEmployee = employees.map((employee) => {
+    let names = employee.name.split('-');
+    return {
+        first_name: names[0],
+        last_name: names[1],
+        pay: employee.pay +3
+    }
+})
 
+
+newEmployee
 
 
 //DESIRED RESULT = 
